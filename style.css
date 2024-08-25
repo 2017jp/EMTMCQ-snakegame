@@ -24,8 +24,7 @@ ul {
 }
 
 li {
-    display: inline-block;
-    padding: 10px;
+    display: table-cell;
     margin: 5px;
     cursor: pointer;
     font-size: 18px;
@@ -33,7 +32,7 @@ li {
 
 .square {
     background-color: red;
-    width: 20px;
+    width: 20%;
     height: 20px;
 }
 
@@ -43,7 +42,12 @@ li {
     height: 20px;
     border-radius: 50%;
 }
-
+#options{
+    display:inline-block;
+}
+.optionwrapper{
+    display:flex;
+}
 .diamond {
     background-color: green;
     width: 20px;
