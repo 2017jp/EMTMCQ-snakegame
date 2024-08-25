@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
 </head>
 <body>
+    <div id="game-screen">
     <div id="nameEntry">
         <input type="text" id="playerName" placeholder="Enter your name">
         <button onclick="startGame()">Start Game</button>
@@ -14,29 +16,23 @@
     <div id="gamePage" style="display:none;">
         <!-- Your game canvas or elements go here -->
         <h1>Welcome to the Snake Game!</h1>
-        <canvas id="snakegamecanvas"></canvas>
+        <canvas id="snakegamecanvas" onclick="wait()"></canvas>
         <!-- Additional game setup -->
+            <div id="question-container">
+            <div id = "question" style="display:block"> 
+             </div>
+           
+            </div>
+            <div id="options" style="display: inline-block">
+            </div>
+               
+            
     </div>
-
-    <script>
-        function startGame() {
-            var playerName = document.getElementById('playerName').value;
-            if (playerName) {
-                // Hide the name entry and show the game page
-                document.getElementById('nameEntry').style.display = 'none';
-                document.getElementById('gamePage').style.display = 'block';
-                
-                // Initialize the game
-                initializeGame(playerName);
-            } else {
-                alert("Please enter your name to start the game.");
-            }
-        }
-
-        function initializeGame(playerName) {
-            console.log("Game started for player:", playerName);
-            // Add your game initialization code here
-        }
-    </script>
+</div>
+<div id="game-over-screen" style="display: none;">
+<div id="final-score"></div>
+</div>
+<script src="script.js"></script>
+   
 </body>
 </html>
